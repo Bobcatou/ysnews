@@ -34,13 +34,13 @@ function news_home_genesis_meta() {
 	if ( is_active_sidebar( 'home-top' ) ) {
 
 		// Add excerpt length filter.
-		add_action( 'genesis_before_loop', 'news_top_excerpt_length' );
+		add_action( 'genesis_before_content_sidebar_wrap', 'news_top_excerpt_length' );
 
 		// Add homepage widgets.
-		add_action( 'genesis_before_loop', 'news_homepage_top_widget' );
+		add_action( 'genesis_before_content_sidebar_wrap', 'news_homepage_top_widget' );
 
 		// Remove excerpt length filter.
-		add_action( 'genesis_before_loop', 'news_remove_top_excerpt_length' );
+		add_action( 'genesis_before_content_sidebar_wrap', 'news_remove_top_excerpt_length' );
 
 	}
 
