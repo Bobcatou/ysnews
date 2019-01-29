@@ -583,7 +583,10 @@ td {
 	background-color: #fff;
 	border: 1px solid #e3e3e3;
 	margin: 60px auto;
-	max-width: 1140px;
+/* Original width */
+/* 	max-width: 1140px; */
+	max-width: 1280px;
+
 }
 
 .news-pro-landing .site-container-wrap {
@@ -602,7 +605,9 @@ td {
 .content-sidebar-sidebar .content-sidebar-wrap,
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
-	width: 960px;
+/*	width: 960px; */
+	width: 1080px;
+
 }
 
 .content-sidebar-sidebar .content-sidebar-wrap {
@@ -652,7 +657,8 @@ td {
 
 .sidebar-primary {
 	float: right;
-	width: 359px;
+/*	width: 359px; */
+	width: 479px;
 }
 
 .sidebar-content .sidebar-primary,
