@@ -34,13 +34,13 @@ function news_home_genesis_meta() {
 	if ( is_active_sidebar( 'home-top' ) ) {
 
 		// Add excerpt length filter.
-		add_action( 'genesis_before_content_sidebar_wrap', 'news_top_excerpt_length' );
+		add_action( 'genesis_before_loop', 'news_top_excerpt_length' );
 
 		// Add homepage widgets.
-		add_action( 'genesis_before_content_sidebar_wrap', 'news_homepage_top_widget' );
+		add_action( 'genesis_before_loop', 'news_homepage_top_widget' );
 
 		// Remove excerpt length filter.
-		add_action( 'genesis_before_content_sidebar_wrap', 'news_remove_top_excerpt_length' );
+		add_action( 'genesis_before_loop', 'news_remove_top_excerpt_length' );
 
 	}
 
@@ -123,6 +123,48 @@ function news_homepage_widgets() {
 		echo '</div>';
 
 	}
+
+add_action( 'genesis_after_content_sidebar_wrap', 'cat_content' );
+function cat_content() {
+	genesis_widget_area( 'cat1', array(
+		'before' => '<div class="one-fourth first category widget-area">',
+		'after'  => '</div>',
+	) );
+		genesis_widget_area( 'cat2', array(
+		'before' => '<div class="one-fourth category widget-area">',
+		'after'  => '</div>',
+	) );
+	genesis_widget_area( 'cat3', array(
+		'before' => '<div class="one-fourth category widget-area">',
+		'after'  => '</div>',
+	) );
+	genesis_widget_area( 'cat4', array(
+		'before' => '<div class="one-fourth category widget-area">',
+		'after'  => '</div>',
+	) );
+	genesis_widget_area( 'cat5', array(
+		'before' => '<div class="one-fourth first category widget-area">',
+		'after'  => '</div>',
+	) );
+	genesis_widget_area( 'cat6', array(
+		'before' => '<div class="one-fourth category widget-area">',
+		'after'  => '</div>',
+	) );
+	genesis_widget_area( 'cat7', array(
+		'before' => '<div class="one-fourth category widget-area">',
+		'after'  => '</div>',
+	) );
+	genesis_widget_area( 'cat8', array(
+		'before' => '<div class="one-fourth category widget-area">',
+		'after'  => '</div><div class="clearfix"></div>',
+	) );
+
+}
+
+
+//Categories Area
+
+
 
 	genesis_widget_area( 'home-bottom', array(
 		'before' => '<div class="home-bottom widget-area">',
