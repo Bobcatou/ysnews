@@ -178,3 +178,122 @@ genesis_register_sidebar( array(
 	'name'        => __( 'Home - Bottom', 'news-pro' ),
 	'description' => __( 'This is the bottom section of the homepage.', 'news-pro' ),
 ) );
+
+
+
+//Listen to the Wind Media added widgets January 18, 2019  2:54 PM
+
+genesis_register_sidebar( array(
+	'id'          => 'cat1',
+	'name'        => __( 'Home - Category 1', 'news-pro' ),
+	'description' => __( 'This is below Home Middle Left and Right.', 'news-pro' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'cat2',
+	'name'        => __( 'Home - Category 2', 'news-pro' ),
+	'description' => __( 'This is below Home Middle Left and Right.', 'news-pro' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'cat3',
+	'name'        => __( 'Home - Category 3', 'news-pro' ),
+	'description' => __( 'This is below Home Middle Left and Right.', 'news-pro' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'cat4',
+	'name'        => __( 'Home - Category 4', 'news-pro' ),
+	'description' => __( 'This is below Home Middle Left and Right.', 'news-pro' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'cat5',
+	'name'        => __( 'Home - Category 5', 'news-pro' ),
+	'description' => __( 'This is below Home Middle Left and Right.', 'news-pro' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'cat6',
+	'name'        => __( 'Home - Category 6', 'news-pro' ),
+	'description' => __( 'This is below Home Middle Left and Right.', 'news-pro' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'cat7',
+	'name'        => __( 'Home - Category 7', 'news-pro' ),
+	'description' => __( 'This is below Home Middle Left and Right.', 'news-pro' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'cat8',
+	'name'        => __( 'Home - Category 8', 'news-pro' ),
+	'description' => __( 'This is below Home Middle Left and Right.', 'news-pro' ),
+) );
+
+
+
+
+
+//Article Top Legacy Post CPT
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_5ba2992cd290a',
+	'title' => 'Article Top',
+	'fields' => array(
+		array(
+			'key' => 'field_517020c4311d0',
+			'label' => 'Article Headline',
+			'name' => 'article_headline',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'formatting' => 'html',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_517021fd311d1',
+			'label' => 'Article Excerpt',
+			'name' => 'article_top',
+			'type' => 'wysiwyg',
+			'instructions' => 'Use this like the old Article Top section for photographs.	Works the same',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			),
+		),
+	),
+	'menu_order' => 1,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+endif;
+
